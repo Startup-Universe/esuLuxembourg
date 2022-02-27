@@ -219,6 +219,53 @@ hr {
     transform:rotate(90deg);
 }
 
+.bcontainer {
+  width: auto;
+  margin:auto;
+}
+
+.bimage {
+  opacity: 1;
+  width: auto;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  padding-bottom: 20px;
+}
+
+.bmiddle {
+  transition: .4s ease;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+
+}
+
+.bcontainer:hover .bimage {
+  opacity: 0.3;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+}
+
+.bcontainer:hover .bmiddle {
+  opacity: 1;
+  padding-top: 8px;
+
+}
+
+.btext {
+  opacity: 0.9;
+  border-radius: 10px;
+  color: #00ffff;
+  font-size: 15px;
+  align-items: center;
+  text-align: center;
+}
+
 .photoframe {
   display: flex;
   justify-content: space-around;
@@ -231,39 +278,40 @@ hr {
 }
 
 .grow {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   background-color: #00008B;
   border-radius: 15px;
   box-shadow: 2px 1px 10px 5px #00ffff;
-  margin: 10px 10px;
+  margin: auto;
+  height: auto;
+  width: auto;
+  text-align: center;
+  vertical-align: baseline;
 }
 
 /* Create four equal columns that sits next to each other */
 .gcolumn {
-  flex: 55%;
-  max-width: 25%;
+  display: inline-block;
+  position: relative;
+  max-width: 20%;
+  padding: 10px 10px;
+  margin: 10px 10px;
 }
 
 .gcolumn img {
-  margin-top: 4px;
-  padding: 10px 10px;
+  width: 80%;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
-  .column {
-    flex: 50%;
-    max-width: 50%;
+  .gcolumn {
+    max-width: 40%;
   }
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-  .column {
-    flex: 100%;
-    max-width: 70%;
+  .gcolumn  {
+    max-width: 40%;
   }
 }
 
